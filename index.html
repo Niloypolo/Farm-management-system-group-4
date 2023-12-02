@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Manager Dashboard</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <style>
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Farm Manager</h1>
+    </header>
+
+    <nav>
+        <button onclick="showSection('overview')">Overview</button>
+        <button onclick="showSection('livestock')">Livestock</button>
+        <button onclick="showSection('crop_sell')">Crop Sell</button>
+        <button onclick="showSection('monthly_maintenance')">Monthly Farm Maintenance</button>
+        <button onclick="showSection('utility_cost')">Utility Cost</button>
+        <button onclick="showSection('land_of_crops_sowed')">Land of Crops Sowed</button>
+        <button onclick="showSection('list_of_fertilizer')">List of Fertilizer</button>
+        <button onclick="showSection('list_of_pesticides')">List of Pesticides</button>
+        <button onclick="showSection('harvested_crops')">Harvested Crops</button>
+        <button onclick="showSection('crop_quality_control')">Crop Quality Control</button>
+        <button onclick="showSection('product_storage_amount')">Product Storage Amount</button>
+        <button onclick="showSection('supplier')">Supplier</button>
+        <button onclick="showSection('all_bills')">All Bills</button>
+        <button onclick="showSection('final_report')">Final Report</button>
+        <button onclick="showSection('summary')">Summary</button>
+    </nav>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <canvas id="expensesChart" width="400" height="200"></canvas>
+    </section>
+    
+
+    <section id="summary">
+        <h2>Summary</h2>
+        <!-- Add your livestock content here -->
+    </section>
+
+    <section id="livestock" class="dashboard-section">
+        <h2>Livestock</h2>
+        <canvas id="livestockChart" width="400" height="200"></canvas>
+        <!-- Include livestock information here -->
+        <!-- Add relevant content -->
+    </section>
+    
+
+
+    <footer>
+        <p>&copy; 2023 Farm Manager</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+    
+    <script src="charts.js"></script>
+    <script src="pie.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+
+
+
+
+</body>
+</html>
